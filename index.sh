@@ -18,7 +18,7 @@ fi
 case $ARGS1 in
 
 version)
-echo f version 0.0.16, build time 2018年 03月 08日 星期四 15:01:53 CST
+echo f version 0.0.20, build time 2018年 03月 19日 星期一 15:16:08 CST
 ;;
 
 help)
@@ -30,15 +30,18 @@ show                   show function detail
 version                show f version
 
 centos-install-docker  install docker-ce and set mirror acceleration address
+git-dic-pull            拉取当前文件夹下的仓库
+install-go             install various version of golang
+mysql-dump             dump mysql
+proxy                   proxy
+ssh                    ssh to servers d is deve t is tenct
 ubuntu-install-docker  ubuntu install docker
 
 "
 ;;
 
 *)
-# AIM=$F_TEMP/$1.sh
 AIM=~/shell/func/$1.sh
-echo $AIM
 if [ ! -f $AIM ]; then
 	printf "loading $1 ... "
 	if [[ `curl -s -o $AIM -w "%{http_code}" st.wolfogre.com/func/$1.sh` != "200" ]]; then
@@ -52,3 +55,9 @@ bash $AIM `echo $* | cut -s -d " " -f1 --complement`
 ;;
 esac
 }
+
+
+alias dc="docker-compose"
+alias dcup="docker-compose up -d"
+alias dk="docker"
+

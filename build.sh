@@ -96,7 +96,8 @@ echo -e '''
 ;;
 
 *)
-AIM=$F_TEMP/$1.sh
+# AIM=$F_TEMP/$1.sh
+AIM=~/shell/func/$1.sh
 if [ ! -f $AIM ]; then
 	printf "loading $1 ... "
 	if [[ `curl -s -o $AIM -w "%{http_code}" st.wolfogre.com/func/$1.sh` != "200" ]]; then
@@ -110,6 +111,14 @@ bash $AIM `echo $* | cut -s -d " " -f1 --complement`
 ;;
 esac
 }
+''' >> index.sh
+
+# Alias
+
+echo -e '''
+alias dc="docker-compose"
+alias dcup="docker-compose up -d"
+alias dk="docker"
 ''' >> index.sh
 
 . index.sh
@@ -126,3 +135,4 @@ cp -f README.origin.md README.md
 echo "\`\`\`" >> README.md
 echo $(f help) >> README.md
 echo "\`\`\`" >> README.md
+

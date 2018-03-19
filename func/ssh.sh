@@ -6,9 +6,9 @@ set -e
 read -p "Connect to the services name [d] is develop [t] is tenct:" s
 
 if [ $s == "d" ]; then
-    ssh deployer@kyytest
+    ssh deployer@114.215.43.120
 fi
 
 if [ $s == "t" ]; then
-    ssh deployer@kyytest
+    ssh ubuntu@119.29.175.173
 fi

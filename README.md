@@ -26,5 +26,5 @@ Close you session and `st` disappear without anything left.
 ## st help
 
 ```
-clean clean local functions cache help show help infomations show show function detail version show f version centos-install-docker install docker-ce and set mirror acceleration address ubuntu-install-docker ubuntu install docker
+clean clean local functions cache help show help infomations show show function detail version show f version centos-install-docker install docker-ce and set mirror acceleration address git-dic-pull 拉取当前文件夹下的仓库 install-go install various version of golang mysql-dump dump mysql proxy proxy ssh ssh to servers d is deve t is tenct ubuntu-install-docker ubuntu install docker
 ```
