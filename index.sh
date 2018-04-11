@@ -60,4 +60,3 @@ esac
 alias dc="docker-compose"
 alias dcup="docker-compose up -d"
 alias dk="docker"
-
