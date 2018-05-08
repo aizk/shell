@@ -18,7 +18,7 @@ fi
 case $ARGS1 in
 
 version)
-echo f version 0.0.20, build time 2018年 03月 19日 星期一 15:16:08 CST
+echo f version 0.0.21, build time 2018年 05月 08日 星期二 17:47:51 CST
 ;;
 
 help)
@@ -29,9 +29,13 @@ help                   show help infomations
 show                   show function detail
 version                show f version
 
+bee-gorm                生成数据表对应的结构
 centos-install-docker  install docker-ce and set mirror acceleration address
-git-dic-pull            拉取当前文件夹下的仓库
+filedown                从服务器下载文件
+fileup                  上传文件到服务器
+git-dic-pull            拉取当前文件夹下的所有仓库
 install-go             install various version of golang
+migration               创建 migration 文件
 mysql-dump             dump mysql
 proxy                   proxy
 ssh                    ssh to servers d is deve t is tenct
@@ -41,6 +45,7 @@ ubuntu-install-docker  ubuntu install docker
 ;;
 
 *)
+# AIM=$F_TEMP/$1.sh
 AIM=~/shell/func/$1.sh
 if [ ! -f $AIM ]; then
 	printf "loading $1 ... "
@@ -57,6 +62,5 @@ esac
 }
 
 
-alias dc="docker-compose"
-alias dcup="docker-compose up -d"
-alias dk="docker"
+source ~/shell/alias.sh
+

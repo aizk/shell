@@ -116,9 +116,7 @@ esac
 # Alias
 
 echo -e '''
-alias dc="docker-compose"
-alias dcup="docker-compose up -d"
-alias dk="docker"
+source ~/shell/alias.sh
 ''' >> index.sh
 
 . index.sh
