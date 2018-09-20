@@ -6,7 +6,6 @@ alias dk="docker"
 
 # proxy
 alias proxy="proxychains"
-
 alias proxyhttp="export http_proxy='http://127.0.0.1:8123' export https_proxy='http://127.0.0.1:8123'"
 alias proxyhttpdelete="export http_proxy='' exprot https_proxy=''"
 
